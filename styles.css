@@ -1,0 +1,44 @@
+body{
+  margin: 0;
+  font-family: cursive;
+}
+.menu-collapsible{
+  padding:0 0 0 20px ;
+}
+.menu-content{
+  max-height: 0px;
+  overflow: hidden;
+
+}
+.menu-content ul{
+  list-style-type: none;
+  padding:0;
+}
+.menu-content a{
+  display:block;
+  padding: 10px;
+  text-decoration: none;
+  color: #b7b7b7;
+}
+.menu-content a:hover{
+  color: #000000;
+}
+
+input#menu{
+ display: none;/**on cache la checkboc******************************/
+}
+
+.menu-collapsible label{
+  display:block;
+  font-size: 36px;
+  cursor: pointer;
+  background: url(png/002-menu.png) no-repeat left center;
+  padding:5px 0 10px 50px;
+}
+/*** quand la checkbox est coché**********************/
+input:checked ~ .menu-content {
+  max-height: 100%;
+}
+input:checked ~ label{
+  background: url(png/001-cancel.png) no-repeat left center;
+}
